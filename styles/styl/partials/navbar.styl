@@ -1,0 +1,45 @@
+.neo-Navbar {
+  
+  &.navbar-default {
+    background-color: $neo-White;    
+  }
+  
+  .neo-Navbar-brand {
+    padding:0;  
+  }
+  
+  .neo-Navbar-title,
+  .neo-Navbar-subtitle {
+    margin: 0;      
+  }
+  
+  .neo-Navbar-menu {
+    li {
+      a {
+        padding-top:0;
+        padding-bottom: 5px;
+        
+        text-transform: uppercase;
+      }
+      
+      &.active {
+        a {          
+          background-color: transparent;
+          color: $neo-Purple; 
+        }
+        
+        &:after {
+          content: "";
+          display: block;
+          height:6px;
+          background-color: $neo-Purple;
+        }
+      }
+    }
+  }
+  
+  .neo-Navbar-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

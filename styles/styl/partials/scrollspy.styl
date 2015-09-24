@@ -1,0 +1,41 @@
+.neo-ScrollSpy-container {  
+  position: fixed;
+  top: $neo-NavbarHeight-xs;
+  z-index:10;
+  right:0;
+  
+  .navbar {
+    border-radius: 0; 
+    width:100%;   
+  }
+  
+  .navbar-nav>li {
+    float: left !important;
+  }
+
+  .neo-ScrollSpy-menu {
+    li {     
+      a {          
+        font-weight: 700;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: $neo-ActiveScrollSpyColor;
+        }
+      } 
+       &.active {
+          a {          
+            background-color: transparent;
+            color: $neo-ActiveScrollSpyColor; 
+
+            &:hover,
+            &:focus  {
+              background-color: transparent;
+              color: $neo-ActiveScrollSpyColor;
+            }
+          }
+        }
+      }    
+  }
+}

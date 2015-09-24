@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default navbar-fixed-top neo-Navbar neo-BoxShadow">
+  <div class="neo-Navbar-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" 
+        data-toggle="collapse" data-target="#navbar" 
+        aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand neo-Navbar-brand" href="/">
+         <span>
+           <h2 class="neo-Navbar-title hidden-xs hidden-sm visible-md-block visible-lg-block">
+             <%= pageTitle%>
+            </h2>
+           <h3 class="neo-Navbar-title hidden-md hidden-lg visible-xs-block visible-sm-block"><%= pageTitle%></h3>
+          <h4 class="neo-Navbar-subtitle"><%= pageSubTitle%></h4>
+        </span>
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right neo-Navbar-menu">
+      <% for(var i=0; i < menuItems.length; i++) {%>
+            <% if(menuItems[i].isActive){ %>
+              <li class="active">
+                <a href="<%= menuItems[i].href %>"> <h4><%= menuItems[i].displayName%></h4></a>
+              </li>
+            <% } else{ %>  
+              <li>
+                <a href="<%= menuItems[i].href %>"> <h4><%= menuItems[i].displayName%></h4></a>
+              </li>
+            <% } %>          
+        <% } %>       
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
