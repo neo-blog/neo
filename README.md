@@ -113,7 +113,12 @@ Neo comes with default page configuration located inside of `config.js` file. Mo
 
 #### Editing Styles:
 
-Neo uses the [stylus](http://learnboost.github.io/stylus/) pre-processor, and twitter bootstrap as a base styles. Most of the times you would never need to edit any styles, but if you want to add custom stylus to your page just cd into `styles/styl/` folder, and copy paste your styles inside custom.styl folder and save it.
+I
+Neo uses the [stylus](http://learnboost.github.io/stylus/) pre-processor, and twitter bootstrap as a base styles. Most of the times you would never need to edit any styles. 
+
+If you want to edit the color schemes on the page, go to `styles/styl/variables.styl` and change the colors. The default color variables use the rgb values specified in the initial design. If you want to know more about variables in stylus see [this](https://learnboost.github.io/stylus/docs/variables.html).
+
+If you want to add custom stylus to your page just cd into `styles/styl/` folder, and copy paste your styles inside custom.styl folder and save it.
 
 When we are generating the site by running `npm run generate` the script will automatically pickup your custom styles and bundle them to the `main.css` generated file.
 
