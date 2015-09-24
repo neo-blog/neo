@@ -1,0 +1,74 @@
+/* responsive styles*/
+/*mobile extra-small*/
+@media (min-width: 320px) {
+}
+
+/*mobile small*/
+@media (min-width: 480px) {
+
+}
+
+/*tablet*/
+@media (min-width: 768px) {
+  .neo-Navbar {
+    height: $neo-NavbarHeight-m;
+    
+    .neo-Navbar-container {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }
+  
+  .neo-Body {
+    margin-top: $neo-NavbarHeight-m;
+  }
+
+  .neo-ScrollSpy-container {    
+    top: $neo-NavbarHeight-m;
+  }
+}
+
+/*desktop*/
+@media (min-width: 1024px) {
+  .neo-Navbar {
+    height: $neo-NavbarHeight-l;
+    
+    .neo-Navbar-container {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    
+    .neo-Navbar-brand {
+      padding-top: 20px;
+    }
+    
+    .neo-Navbar-menu {
+      li {
+        a {
+          padding-top: 35px;
+        }
+      }
+    }
+  }
+  
+  .neo-ScrollSpy-container {  
+    .navbar {
+      width:465px;   
+    }
+  }
+  .neo-Body {
+    margin-top: $neo-NavbarHeight-l;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: auto;
+  }
+
+  .neo-ScrollSpy-container {    
+    top: $neo-NavbarHeight-l;
+  }
+}
+
+/*desktop large*/
+@media (min-width: 1366px) {
+
+}

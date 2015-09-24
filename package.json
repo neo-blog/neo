@@ -1,0 +1,32 @@
+{
+  "name": "neo",
+  "version": "0.0.1",
+  "description": "A simple static portfolio site generator.",
+  "main": "index.js",
+  "scripts": {
+    "generate-styles": "stylus styles/styl/main.styl --out styles/css/",
+    "start": "http-server -p 9292 && echo \"starting site preview at http://localhost:9292\" ",
+    "generate": "npm run generate-styles && babel-node --optional strict --stage 1 -- index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.3.4",
+    "fs-extra": "^0.24.0",
+    "markdown": "^0.5.0",
+    "meta-marked": "^0.3.3",
+    "mime-types": "^2.0.10",
+    "mkdirp": "^0.5.0",
+    "rimraf": "^2.3.3",
+    "slugify": "^0.1.1",
+    "songbird": "^1.0.1",
+    "underscore": "^1.8.3",
+    "unescape": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "http-server": "^0.8.0",
+    "stylus": "^0.52.4"
+  },
+  "contributors": [{"name": "Kamakshi Sirisha"}, {"name": "Nikhilesh Katakam"}]
+}

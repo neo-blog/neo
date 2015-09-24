@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="../vendor/jquery/jquery-2.1.4.js"></script>
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../styles/css/main.css" rel="stylesheet" type="text/css" />
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/jquery/jquery.waypoints.min.js"></script>
+<title><%= pageTitle%></title>
+</head>
+<body class="neo-Body">
+  <%- include partials/header.ejs %>
+   <div class="neo-ScrollSpy-container"> 
+     <nav id="neo-ScrollSpy-nav" 
+     data-sections="<%= sectionsString %>"
+     class="navbar navbar-default navbar-static">
+      <div class="container-fluid">        
+        <div class="">
+          <ul class="nav navbar-nav neo-ScrollSpy-menu">
+          	<% for(var i=0; i < sections.length; i++) {%>
+          		<li id="nav-<%= sections[i].sectionId %>"><a href="#<%= sections[i].sectionId %>"><%= sections[i].sectionName %></a></li>			  	
+   			<% } %>             
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>  
+  <div class="neo-ScrollSpy-target js-neo-ScrollSpy-target">
+	  <% for(var i=0; i < projects.length; i++) {%>
+	  	<div class="container neo-Container neo-Container-paddedTop">
+	     	<%- projects[i] %> 
+	  	</div>    
+	   <% } %> 
+   </div>
+   <script>
+   	$(function(){      
+      var sections = $("#neo-ScrollSpy-nav").data("sections");
+      var currentTarget = $("#neo-ScrollSpy-nav").find(".navbar-nav li:first-child");
+      currentTarget.addClass("active");
+      for(var i=0; i<sections.length; i++) {
+        var sectionId = sections[i].sectionId;
+        $("#" + sectionId).waypoint({
+          handler: function() {
+            if(currentTarget) {
+              currentTarget.removeClass("active");
+            }
+            var $el = this.element || {};
+            var currentId = $el.id;
+            currentTarget = $("#nav-" + currentId);
+            currentTarget.addClass("active");
+          },
+          offset: 130
+        });
+
+        $("#nav-" + sectionId).click(function(ev) {
+          ev.preventDefault();
+          var id = ev.currentTarget.id;
+          var sectionId = id.substring(id.indexOf("#nav-") + 5, id.length);
+          $('html, body').animate({
+            scrollTop: $("#" + sectionId).offset().top - 115
+          }, 100);
+        })
+      }
+	});
+   </script>  
+</body>
+</html>
