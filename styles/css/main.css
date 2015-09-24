@@ -115,6 +115,9 @@
   background-color: transparent;
   color: #417505;
 }
+.foo {
+  font-size: 10px;
+}
 @media (min-width: 768px) {
   .neo-Navbar {
     height: 75px;
