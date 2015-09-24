@@ -63,6 +63,54 @@ this is meta data of the file, that `neo` uses for page generations, possible va
 
 `profilePic` and `aboutMe` are used only for home page so they are optional.
 
+### Editing page configurations
+
+Neo comes with default page configuration located inside of `config.js` file. Most of the time your would not need to edit this. but in case your want to further customize here are the supported attributes and description about each attributes
+
+```
+{
+	// The Page banner name, usually your full name or site name 	
+	pageTitle: "Bob",
+	
+	// The page sub stite that shows up under the site banner
+	pageSubTitle: "UX Designer",
+	
+	// Your profile picture link, that shows up on home page
+	profilePic: "images/profile-pic.jpg",
+
+	// a little bit about your self
+	aboutMe: "Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui.",
+
+	// a list of sub folder names with in contents that are excluded from html generation, default is resume folder.
+	excludedGeneratedPages: ["resume", "foo", "bar"],
+
+	// excluded items from navigation menu.
+	excludedMenuItems: ["home", "foo", "bar"],
+
+	// a flag that indicate if default profile page sections should be displayed on home page.
+	displayDefaultHomePage: true,
+
+	// a link to your resume pdf
+	resumeLink: "/contents/resume/resume.pdf",
+
+	// known template mappings. DO NOT EDIT THIS IF YOU DONT KNOW WHAT THEY DO
+	knownTemplateMappings: {
+		"my work": "scrolling-page",
+		"home": "home",
+		"extras": "master-detail",
+		"writing": "master-detail"
+	},
+
+	// order of menu items on the nav bar. DO NOT EDIT THIS IF YOU DONT KNOW WHAT THEY DO
+	menuItemsOrder: {
+		"my work": 1,
+		"resume": 2,
+		"writing": 3,
+		"extras": 4
+	}
+}
+```
+
 #### Editing Styles:
 
 Neo uses the [stylus](http://learnboost.github.io/stylus/) pre-processor, and twitter bootstrap as a base styles. Most of the times you would never need to edit any styles, but if you want to add custom stylus to your page just cd into `styles/styl/` folder, and copy paste your styles inside custom.styl folder and save it.
