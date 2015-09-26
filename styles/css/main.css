@@ -76,7 +76,7 @@
 .neo-ProileContainer .neo-ProileContainer-pic img {
   display: block;
   margin: 0 auto;
-  width: 250px;
+  width: auto;
   height: 320px;
 }
 .neo-ProileContainer .neo-ProileContainer-content {
@@ -84,6 +84,9 @@
 }
 .neo-ProileContainer .neo-ProileContainer-content h1 {
   margin-top: 0;
+}
+.neo-ProileContainer .neo-Container--zeroPaddingTop {
+  padding-top: 0 !important;
 }
 .neo-ScrollSpy-container {
   position: fixed;
