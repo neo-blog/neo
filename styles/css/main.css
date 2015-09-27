@@ -76,8 +76,7 @@
 .neo-ProileContainer .neo-ProileContainer-pic img {
   display: block;
   margin: 0 auto;
-  width: auto;
-  height: 320px;
+  max-width: 100%;
 }
 .neo-ProileContainer .neo-ProileContainer-content {
   background-color: #f5f5f5;
